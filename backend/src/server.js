@@ -22,7 +22,14 @@ app.use((error, _req, res, _next) => {
 });
 
 if (!process.env.VERCEL) {
-  app.listen(port, () => console.log(`Weather API listening on port ${port}`));
+  const server = app.listen(port, () => console.log(`Weather API listening on port ${port}`));
+  server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE') {
+      console.warn(`Port ${port} is already in use; using the existing API process.`);
+      return;
+    }
+    throw error;
+  });
 }
 
 export default app;
