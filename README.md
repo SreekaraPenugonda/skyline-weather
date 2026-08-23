@@ -2,13 +2,14 @@
 
 A basic full-stack weather dashboard based on the attached architecture.
 
-## Run locally
+## Deployment
 
 1. Install Node.js 18+ and PostgreSQL 14+.
 2. Copy `backend/.env.example` to `backend/.env` and add your OpenWeather API key and database values.
-3. Copy `frontend/.env.example` to `frontend/.env` if the API runs anywhere other than `http://localhost:5000/api`.
-4. Create the database and schema: `createdb weather_db` then `psql -d weather_db -f database/init.sql`.
+3. Set `VITE_API_URL` to `/api` when the frontend and API share a domain, or to the public API URL when they are deployed separately.
+4. Create the production database and apply `database/init.sql`.
 5. Run `npm install` in the root, then `npm run install:all`.
-6. Start both apps with `npm run dev`.
+6. Build the frontend with `npm run build --prefix frontend` and deploy `frontend/dist`.
+7. Deploy the backend with `npm start --prefix backend` or your hosting provider's start command.
 
-The frontend runs on port 5173 and the API on port 5000. Without database configuration, history is kept in memory; without an OpenWeather key, weather requests return a setup error.
+For production, configure `PORT`, `OPENWEATHER_API_KEY`, and the hosted database values in the deployment environment. Without database configuration, history is kept in memory; without an OpenWeather key, weather requests return a setup error.

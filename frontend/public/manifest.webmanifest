@@ -1,0 +1,9 @@
+{
+  "name": "Skyline Weather",
+  "short_name": "Skyline",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#edf6f4",
+  "theme_color": "#1e504a",
+  "description": "A clear look at the weather wherever you are headed next."
+}

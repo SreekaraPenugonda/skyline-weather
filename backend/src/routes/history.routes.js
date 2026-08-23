@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { deleteHistory, listHistory, saveHistory } from '../services/history.service.js';
+import { clearHistory, deleteHistory, listHistory, saveHistory } from '../services/history.service.js';
 
 const router = Router();
 
@@ -15,6 +15,10 @@ router.post('/', async (req, res, next) => {
 
 router.delete('/:id', async (req, res, next) => {
   try { await deleteHistory(Number(req.params.id)); res.status(204).end(); } catch (error) { next(error); }
+});
+
+router.delete('/', async (_req, res, next) => {
+  try { await clearHistory(); res.status(204).end(); } catch (error) { next(error); }
 });
 
 export default router;
