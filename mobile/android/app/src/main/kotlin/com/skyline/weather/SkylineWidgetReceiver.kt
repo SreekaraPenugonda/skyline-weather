@@ -6,6 +6,7 @@ import androidx.glance.GlanceModifier
 import androidx.glance.appwidget.GlanceAppWidget
 import androidx.glance.appwidget.GlanceAppWidgetReceiver
 import androidx.glance.appwidget.appWidgetBackground
+import androidx.glance.appwidget.provideContent
 import androidx.glance.layout.Alignment
 import androidx.glance.layout.Column
 import androidx.glance.layout.fillMaxSize
@@ -14,8 +15,7 @@ import androidx.glance.text.Text
 import androidx.glance.text.TextStyle
 import androidx.glance.unit.ColorProvider
 import androidx.glance.unit.dp
-import androidx.glance.appwidget.updateAll
-import androidx.glance.appwidget.provideContent
+import androidx.compose.ui.graphics.Color
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import org.json.JSONObject
@@ -36,9 +36,9 @@ object SkylineWeatherWidget : GlanceAppWidget() {
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
-                Text(weather.city, style = TextStyle(color = ColorProvider(android.graphics.Color.WHITE)))
-                Text("${weather.temperature}°C", style = TextStyle(color = ColorProvider(android.graphics.Color.WHITE)))
-                Text(weather.condition, style = TextStyle(color = ColorProvider(android.graphics.Color.WHITE)))
+                Text(weather.city, style = TextStyle(color = ColorProvider(Color.White)))
+                Text("${weather.temperature}°C", style = TextStyle(color = ColorProvider(Color.White)))
+                Text(weather.condition, style = TextStyle(color = ColorProvider(Color.White)))
             }
         }
     }
