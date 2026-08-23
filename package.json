@@ -1,6 +1,7 @@
 {
   "name": "weather-dashboard",
   "private": true,
+  "type": "module",
   "scripts": {
     "install:all": "npm install --prefix backend && npm install --prefix frontend",
     "dev": "concurrently \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\""

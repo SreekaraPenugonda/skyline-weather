@@ -21,4 +21,8 @@ app.use((error, _req, res, _next) => {
   res.status(error.status || 500).json({ error: 'Something went wrong. Please try again.' });
 });
 
-app.listen(port, () => console.log(`Weather API listening on port ${port}`));
+if (!process.env.VERCEL) {
+  app.listen(port, () => console.log(`Weather API listening on port ${port}`));
+}
+
+export default app;
