@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="112" fill="#1e504a"/>
+  <circle cx="368" cy="144" r="72" fill="#f0ad65" opacity=".95"/>
+  <path d="M118 316c0-48 39-87 87-87 20-54 72-91 133-91 78 0 141 63 141 141v7c29 7 50 33 50 64 0 37-30 67-67 67H161c-24 0-43-19-43-43 0-26 19-48 44-52-27-8-44-29-44-56Z" fill="#edf6f4" opacity=".94"/>
+  <text x="256" y="402" text-anchor="middle" fill="#1e504a" font-family="Georgia,serif" font-size="72" font-style="italic">S</text>
+</svg>

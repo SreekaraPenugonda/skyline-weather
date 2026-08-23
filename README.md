@@ -20,3 +20,7 @@ A basic full-stack weather dashboard based on the attached architecture.
 4. Set Deployment Protection to allow public access, otherwise browsers will receive Vercel SSO HTML instead of `manifest.webmanifest` and API JSON.
 
 For production, configure `PORT`, `OPENWEATHER_API_KEY`, and the hosted database values in the deployment environment. Without database configuration, history is kept in memory; without an OpenWeather key, weather requests return a setup error.
+
+## Open-source contributor
+
+Skyline Weather is contributed and maintained by [Sreekara Penugonda](https://www.linkedin.com/in/sreekara-penugonda-882965302/).

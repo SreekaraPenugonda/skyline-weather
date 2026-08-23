@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Skyline Weather</string>
+    <string name="weather_api_url">https://your-public-api.example.com/api/weather/London</string>
+</resources>

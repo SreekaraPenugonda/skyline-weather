@@ -1,0 +1,6 @@
+<resources>
+    <style name="Theme.Skyline" parent="android:style/Theme.Material.Light.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:colorAccent">#ED775E</item>
+    </style>
+</resources>

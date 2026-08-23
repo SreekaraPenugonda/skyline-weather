@@ -3,3 +3,12 @@ dist/
 backend/.env
 frontend/.env
 *.log
+
+# Android/Gradle generated files
+**/.gradle/
+**/build/
+local.properties
+
+# IDE metadata
+.idea/
+*.iml
