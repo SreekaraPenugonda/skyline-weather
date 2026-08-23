@@ -314,7 +314,14 @@ function App() {
       </main>
       {notice && <div className="toast" role="status">{notice}</div>}
       {showShortcuts && <div className="shortcuts-modal" role="dialog" aria-label="Keyboard shortcuts"><button onClick={() => setShowShortcuts(false)} aria-label="Close shortcuts"><X size={15} /></button><h3>Keyboard shortcuts</h3><p><kbd>/</kbd> Focus search</p><p><kbd>Esc</kbd> Clear search</p><p><kbd>C</kbd> Toggle units</p><p><kbd>?</kbd> Show shortcuts</p></div>}
-      <footer><span>skyline weather</span><span>simple forecasts, beautifully clear</span></footer>
+      <footer>
+        <div className="footer-brand"><span>skyline weather</span><small>simple forecasts, beautifully clear</small></div>
+        <div className="contributor-profile">
+          <span className="contributor-avatar">SP</span>
+          <div><strong>Sreekara Penugonda</strong><small>Open-source contributor</small></div>
+          <a href="https://www.linkedin.com/in/sreekara-penugonda-882965302/" target="_blank" rel="noreferrer" aria-label="View Sreekara Penugonda on LinkedIn">LinkedIn <ArrowUpRight size={13} /></a>
+        </div>
+      </footer>
     </div>
   );
 }
